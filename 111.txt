@@ -1,0 +1,4 @@
+.navbar-nav .nav-link {
+        font-size: 25px; /* Increase this value to make the text bigger */
+		font-family: Arial;
+    }

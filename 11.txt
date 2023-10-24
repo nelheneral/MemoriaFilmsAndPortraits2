@@ -1,0 +1,82 @@
+Website
+Nel Heneral Photography with 5 modules.
+
+
+- Wordpress
+- Html/CSS 
+- Gradiant surface
+- Notepad ++
+
+
+need for design
+Photo
+Video
+
+
+Note: simple muna!
+
+
+home 
+About us
+Contact us
+Services
+Porfolio
+
+004d3e - solid army green
+ffc35b - light yellow
+fda00c - light orange
+fffff  - white
+
+
+
+
+
+
+photogrid
+
+.photogrid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+ grid-auto-rows: 250px;
+ gap: 15px;
+ margin-bottom: 15px;
+}
+
+.photogrid img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+html (body)
+Next, create the HTML structure for the photogrid and the automatic slider. You can add this code inside the <body> tag of your HTML document:
+
+<div class="photogrid">
+ <img src="image1.jpg" alt="Image 1">
+ <img src="image2.jpg" alt="Image 2">
+ <img src="image3.jpg" alt="Image 3">
+ <!-- Add more images as needed -->
+</div>
+
+<div class="slider">
+ <img src="image1.jpg" alt="Image 1">
+ <img src="image2.jpg" alt="Image 2">
+ <img src="image3.jpg" alt="Image 3">
+ <!-- Add more images as needed -->
+</div>
+
+jscript
+$(document).ready(function() {
+ var slider = $('.slider');
+ var currentIndex = 0;
+
+ function changeSlide() {
+    slider.find('img').eq(currentIndex).fadeOut(1000, function() {
+      currentIndex = (currentIndex + 1) % slider.find('img').length;
+      slider.find('img').eq(currentIndex).fadeIn(1000);
+    });
+ }
+
+ changeSlide();
+ setInterval(changeSlide, 5000);
+});

@@ -1,0 +1,6 @@
+search icon 
+
+<span class = "search-icon">
+                    <i class = "fas fa-search"></i>
+                </span>
+            </div>
